@@ -1,0 +1,22 @@
+{
+    "products": [
+        {   
+            "id":1,
+            "Product type": "Dry food for dogs", 
+            "price": 150,
+            "image": "static/images/products/1.jpg"
+        }, 
+        {
+            "id":2,
+            "Product type": "Dry food for cats", 
+            "price": 150,
+            "image": "static/images/products/2.jpg"
+        }, 
+        {
+            "id":3,
+            "Product type": "Wet food", 
+            "price": 100, 
+            "image": "static/images/products/3.PNG"
+        }
+    ]
+}

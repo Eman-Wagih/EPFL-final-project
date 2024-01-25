@@ -1,0 +1,76 @@
+{
+    "dogs": [
+        {
+            "name": "Rix",
+            "age": "1.5 years",
+            "breed": "husky",
+            "gender": "male",
+            "vaccinated": "yes",
+            "image": "https://thehappypuppysite.com/wp-content/uploads/2017/12/siberian6.jpg"
+        },
+        {
+            "name": "Timo",
+            "age": "2 years",
+            "breed": "German Shepherd",
+            "gender": "male",
+            "vaccinated": "no",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/20110425_German_Shepherd_Dog_8505.jpg"
+        },
+        {
+            "name": "Snow",
+            "age": "11 months",
+            "breed": "Labrador Retriever",
+            "gender": "female",
+            "vaccinated": "yes",
+            "image": "https://th.bing.com/th/id/OIP.UhiAw01O-TfT5eetSLNSbQHaHx?rs=1&pid=ImgDetMain"
+        },
+        {
+            "name": "Arya",
+            "age": "3",
+            "breed": "Golden",
+            "gender": "female",
+            "vaccinated": "no",
+            "image": "https://th.bing.com/th/id/OIP.kAMCjX7G_1inCivhWgX_7QAAAA?rs=1&pid=ImgDetMain"
+        },
+        {
+            "name": "Loly",
+            "age": "3 months",
+            "breed": "Chihuahua",
+            "gender": "female",
+            "vaccinated": "no",
+            "image": "https://mydoggything.com/wp-content/uploads/2021/06/CHIHUAHUA15.jpg"
+        },
+        {
+            "name": "Butcher",
+            "age": "5 years",
+            "breed": "Boxer",
+            "gender": "male",
+            "vaccinated": "yes",
+            "image": "https://th.bing.com/th/id/OIP.GIlqhQUiM77cE3s_3itQNwAAAA?rs=1&pid=ImgDetMain"
+        },
+        {
+            "name": "Puggy",
+            "age": "3 months",
+            "breed": "pug",
+            "gender": "male",
+            "vaccinated": "no",
+            "image": "https://th.bing.com/th/id/OIP.WIu8ITTCow1Fl2GVGSASvAHaGK?rs=1&pid=ImgDetMain"
+        },
+        {
+            "name": "Hania",
+            "age": "1 year",
+            "breed": "English cocker",
+            "gender": "female",
+            "vaccinated": "yes",
+            "image": "https://th.bing.com/th/id/OIP.mElF3Py500m0JF3B3n73VgHaE_?rs=1&pid=ImgDetMain"
+        },
+        {
+            "name": "rix",
+            "age": "2 years",
+            "breed": "german",
+            "gender": "male",
+            "vaccinated": "no",
+            "image": "https://th.bing.com/th/id/OIP.Z3SZjRKmSyT48MiImAqUQwHaFj?rs=1&pid=ImgDetMain"
+        }
+    ]
+}
