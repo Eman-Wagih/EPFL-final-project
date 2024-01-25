@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/dogs.css">
+    <title>adopt a dog </title>
+</head>
+<body>
+    <nav class="nav-links"> 
+        <ul> 
+            <li> <a href="/cats" >adopt a cat</a> </li>
+            <li> <a href="/dogs" >adopt a dog</a> </li>
+            <li> <a href="/adoption"> put your pet up for adoption </a> </li>  
+            <li> <a href="/shop"> Shop </a></li>
+            <li> <a href="/" class="log-out"> Log out</a></li>
+        </ul>
+       </nav>
+
+       <form action="/search-dogs" method="post">
+        <input type="search" placeholder="search dogs by breed, gender, etc" name="dog" class="dog-search" style="
+         position: absolute;
+         margin-top: 10px;
+         left: 30%;
+         width: 350px;
+         border: none;
+         height: 30px;
+         border-radius: 20px;
+         text-align: center;
+         border: 1px solid peru;
+        "> 
+       </form>
+
+    <div class="parent" style="
+        display: grid;
+        justify-content: center;
+        grid-template-columns: auto auto auto auto;
+        align-items: center;
+        margin-top: 80px;
+        column-gap: 30px;
+        row-gap: 35px;
+        margin-bottom: 15px;">
+
+    {% for dog in dog_data %}
+    <div class="animal" style=
+    "width: 200px;
+    height: 214px;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 2px 5px 14px 3px beige; 
+    background-color: rgb(236, 218, 183);
+    "> 
+    <p> name: {{dog["name"]}}</p>
+    <p> age: {{dog["age"]}}</p>
+    <p> breed: {{dog["breed"]}}</p>
+    <p> vaccinated?: {{dog["vaccinated"]}}</p>
+    <p> gender: {{dog["gender"]}} </p>
+    <a href="/shelter">
+        <button class="contact-owner" style="
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: peru;
+        cursor: pointer;
+        text-decoration: none;"> Adopt </button>
+    </a>
+    <a href="{{ url_for('deletedog', name=dog['name']) }}">
+        <button class="delete button" name="{{dog["name"]}}" style="
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: peru;
+        cursor: pointer;
+        text-decoration: none; 
+        "> Adopted </button>
+    </a>
+    </div>
+     <div class="imge" style="
+        border-radius: 10%;
+        width: 200px;
+        height: 214px;">
+        <img src={{dog["image"]}} width="90%" height="100%" style="border-radius: inherit;">
+     </div>
+
+    {% endfor %}
+    </div>
+    <script src="static/dogs.js"></script>
+</body>
+</html>

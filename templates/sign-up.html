@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Sign up </title>
+</head>
+<body style="background-image: url(static/images/bg/bg.jpg); background-size: 600px 300px;">
+  <div class="entro"> 
+    <form method="post" action="/sign-up"> 
+        <p>Please choose a user name </p>
+        <input type="text" name="user_name" id="userName" required>
+        <p>Please enter a password </p>
+        <input type="password" name="password" id="passWord" required>
+        <p>Please re-enter your password password </p>
+        <input type="password" name="password-two" id="passWord" required>
+        <br>
+        <input type="submit" value="sign up" class="sign-up">
+    </form>
+</div>
+  <div class="info" > 
+    <h3> {{info}}</h3>
+  </div>
+</body>
+</html>

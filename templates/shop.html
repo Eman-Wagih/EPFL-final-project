@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/shop.css">
+    <title> shop</title>
+</head>
+<body>
+    <div>
+        <nav class="nav-links"> 
+            <ul> 
+                <li> <a href="/cats" >adopt a cat</a> </li>
+                <li> <a href="/dogs" >adopt a dog</a> </li>
+                <li> <a href="/adoption"> put your pet up for adoption </a> </li>  
+                <li> <a href="/shop"> Shop </a></li>
+                <li> <a href="/" class="log-out"> Log out</a></li>
+            </ul>
+           </nav>
+
+    <div class="listproducts" style="display: grid; justify-content:center; grid-template-columns: auto auto auto auto;
+    gap: 15px; align-items:center; margin-top: 60px"> 
+        {% for product in product_data %}
+        <div class="item" style="width: 250px;height: 350px; text-align:center;border-radius: 10% ;box-shadow: 2px 5px 14px 3px beige; ">
+        <p class="product-type"> {{product["Product type"]}}</p>
+        <p class="price"> {{product["price"]}} EGP </p>
+     <div class="imge" style="border-radius: 10%">
+        <img src={{product["image"]}} width="150px" height="100px" style="border-radius: inherit;">
+     </div>
+     <button class="add-to-cart button" style="
+     border: none;
+     margin: 10px;
+     padding: 10px;
+     border-radius: 10px;
+     background-color: peru;
+     cursor: pointer;
+     font-weight: 500;"> order </button>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="buying" style="display: none;  margin: auto; text-align: center; padding-top: 10px;  border-radius: 15px">
+        <form>
+            <p> please enter your name </p>
+            <input type="text" class="client-name" required>
+            <p> please enter your phone number </p>
+            <input type="number" class="client-phone" required>
+            <p> please enter your email </p>
+            <input type="email" class="client-email" required>
+            <p> add your address </p>
+            <input type="text" class="client-address" required>
+            <p> add dilvery instructions </p>
+            <input type="text">
+            <br>
+            <br>
+            <input type="submit" class="order-now button" value="Order Now" style="
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: peru;
+            cursor: pointer;
+            text-decoration: none;
+            ">
+        </form>
+    </div>
+    <p class="display-info" style="
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;"> </p>
+    <script src="static/shop.js"></script>
+</body>
+</html>

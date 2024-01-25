@@ -1,0 +1,61 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: wheat;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    background-color: peru;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.nav-links a:hover{
+    background-color: rgb(120, 71, 23);
+    font-weight: 600
+};
+
+.adoption-form {
+    position: absolute;
+    left: 45%;
+    top: 10%;
+};
+
+.adoption-form form {
+    width: 200px;
+}   
+.adoption-form p {
+    font-weight: 700;
+}
+
+.adoption-form input {
+    border-radius: 15px;
+    border: 1px solid peru;
+}
+
+.submit-btn
+    {
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: peru;
+        cursor: pointer;
+    };
+
+.adoption-form .submit-btn:hover {
+    background-color: rgb(120, 71, 23);
+}
