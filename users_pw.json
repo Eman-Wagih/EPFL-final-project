@@ -2,55 +2,73 @@
     "users": [
         {
             "user_name": "Eman",
-            "pass_word": "12345"
+            "pass_word": "12345",
+            "is_active": false
         },
         {
             "user_name": "hi",
-            "pass_word": "54321"
+            "pass_word": "54321",
+            "is_active": false
         },
         {
             "user_name": "remotecoders",
-            "pass_word": "2024"
+            "pass_word": "2024",
+            "is_active": false
         },
         {
             "user_name": "Ahmed",
-            "pass_word": "123456"
+            "pass_word": "123456",
+            "is_active": false
         },
         {
             "user_name": "Ahmed",
-            "pass_word": "123456"
+            "pass_word": "123456",
+            "is_active": false
         },
         {
             "user_name": "yara",
-            "pass_word": "12345"
+            "pass_word": "12345",
+            "is_active": false
         },
         {
             "user_name": "noha",
-            "pass_word": "noha1234"
+            "pass_word": "noha1234",
+            "is_active": false
         },
         {
             "user_name": "karim",
-            "pass_word": "karim123"
+            "pass_word": "karim123",
+            "is_active": false
         },
         {
             "user_name": "yarab",
-            "pass_word": "yarab123"
+            "pass_word": "yarab123",
+            "is_active": false
         },
         {
             "user_name": "hmm",
-            "pass_word": "h1234"
+            "pass_word": "h1234",
+            "is_active": false
         },
         {
             "user_name": "noura",
-            "pass_word": "noura12345"
+            "pass_word": "noura12345",
+            "is_active": false
         },
         {
             "user_name": "Eman",
-            "pass_word": "12345"
+            "pass_word": "12345",
+            "is_active": false
         },
         {
             "user_name": "hmmm",
-            "pass_word": "12345"
+            "pass_word": "12345",
+            "is_active": false
+        },
+        {
+            "user_name": "Amir",
+            "pass_word": "12345",
+            "is_active": false
         }
     ]
 }
