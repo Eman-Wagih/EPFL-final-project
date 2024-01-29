@@ -14,9 +14,9 @@ Flask.
 - [x] It uses modules from the Python Standard Library such as JSON. 
 - [x] It contains two classes that have both properties and methods.
 - File name for the class definition: app.py
-- Line number(s) for the class definition:
-  - Name of two properties:
-  - Name of two methods: 
+- Line number(s) for the class definition: line no 9, and 27
+  - Name of two properties: name, age, gender, vaccinated, image. 
+  - Name of two methods: add_new
 - [x] It makes use of JavaScript in the front end and uses the localStorage of the web browser.
 - [x] It uses modern JavaScript (for example, let and const rather than var).
 - [x] It makes use of the reading and writing to the same file feature.
