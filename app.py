@@ -62,21 +62,22 @@ def home_page ():
 def welcome_page():
    return render_template("welcome.html")
 
+
 #sign in 
 @app.route("/form_login", methods = ["POST", "GET"])
 def login ():
-  username = request.form["user_name"]
-  p_w = request.form["password"]
-  with open ("users_pw.json", "r") as f: 
+ username = request.form["user_name"]
+ p_w = request.form["password"]
+ with open ("users_pw.json", "r") as f: 
      data = json.load(f)
      us = data["users"]
-  for user in us: 
-     if username == user["user_name"] and p_w == user["pass_word"]:      
-         return render_template("welcome.html", name=username)  
-            
-     else:
-         return render_template("index.html", info="invalid password")
-  return render_template("index.html", info="invalid user")
+ for user in us: 
+     if username == user["user_name"] and p_w == user["pass_word"]:
+         user["is_active"] = True
+         with open("users_pw.json", "w") as f: 
+            json.dump(data, f, indent=4)
+         return render_template("welcome.html", name=username)     
+ return render_template("index.html", info="invalid user name or password")
 
 # sign up page
 @app.route("/sign-up", methods = ["POST", "GET"])
@@ -89,7 +90,7 @@ def sign ():
          data = json.load(f)
          us = data["users"] 
          temp = {
-            "user_name": username, "pass_word": p_w
+            "user_name": username, "pass_word": p_w, "is_active": False
          }
          us.append(temp)
          with open ("users_pw.json", "w") as s:
@@ -101,20 +102,28 @@ def sign ():
 # takes the user inputs from the form
 @app.route("/select-animal", methods = ["POST", "GET"])
 def pet_for_adoption ():
-   if request.method == "POST":
-      results = request.form
-      pet_type = request.form.get("adopt-animal")
-      pet_name = request.form.get("name")
-      pet_age = request.form.get("age")
-      pet_breed = request.form.get("breed")
-      pet_vaccinated= request.form.get("vaccinated")
-      pet_gender = request.form.get("gender")
-      pet_image = request.form.get("image")
-      new_animal(pet_type, pet_name, pet_age, pet_breed, pet_vaccinated, pet_gender, pet_image)
-      if pet_type == "Cat":
-         return redirect('/cats')
+   with open ("users_pw.json", "r") as f: 
+     data = json.load(f)
+     us = data["users"]
+     for user in us: 
+      if user["is_active"] == False:
+         return render_template("index.html", info = "you need to log in first")  
       else:
-         return redirect("/dogs")   
+         if request.method == "POST":
+          results = request.form
+          pet_type = request.form.get("adopt-animal")
+          pet_name = request.form.get("name")
+          pet_age = request.form.get("age")
+          pet_breed = request.form.get("breed")
+          pet_vaccinated= request.form.get("vaccinated")
+          pet_gender = request.form.get("gender")
+          pet_image = request.form.get("image")
+          new_animal(pet_type, pet_name, pet_age, pet_breed, pet_vaccinated, pet_gender, pet_image)
+         if pet_type == "Cat":
+            return redirect('/cats')
+         else:
+            return redirect("/dogs")
+
 
 
 @app.route("/cats")
@@ -202,6 +211,19 @@ def deletedog(name):
    with open('Dog.json', 'w') as f:
         json.dump(data, f, indent=4)
         return redirect("/dogs")
+
+
+@app.route("/log-out")
+def log_out ():
+   with open ("users_pw.json", "r") as f: 
+     data = json.load(f)
+     us = data["users"]
+     for user in us: 
+         user["is_active"] = False
+         with open("users_pw.json", "w") as f: 
+            json.dump(data, f, indent=4)
+
+   return render_template("index.html")
 
 if __name__ == "__main__":
    app.run(debug=True)
