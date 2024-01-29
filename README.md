@@ -5,8 +5,8 @@ this is a website for adopting pets.
 you can display all pets available for adoption and you can put your pet for adoption and delete it after it has been adopted. 
 
 ## Prerequisites
-Did you add any additional modules that someone needs to install (for instance anything in Python that you `pip install-ed`)? 
-Flask.
+Did you add any additional modules that someone needs to install? 
+you need to install Flask.
 
 ## Project Checklist
 - [x] It is available on GitHub.
