@@ -15,75 +15,32 @@
             <li> <a href="/dogs" >Adopt a dog</a> </li>
             <li> <a href="/adoption"> Put your pet up for adoption </a> </li>  
             <li> <a href="/shop"> Shop </a></li>
-            <li> <a href="/" class="log-out"> Log out</a></li>
+            <li> <a href="/log-out" class="log-out"> Log out</a></li>
         </ul>
        </nav>
 
-       <form action="/search" method="post">
-        <input type="search" placeholder="search cat by breed, gender, etc" name="cat" class="cat-search" style="
-         position: absolute;
-         margin-top: 10px;
-         left: 30%;
-         width: 350px;
-         border: none;
-         height: 30px;
-         border-radius: 20px;
-         text-align: center;
-         border: 1px solid peru;
-        "> 
+       <form action="/search" method="post" >
+        <input type="search" placeholder="search cat by breed, gender, etc" name="cat" class="cat-search"> 
        </form>
 
-<div class="parent" style="
-display: grid;
-justify-content: center;
-grid-template-columns: auto auto auto auto;
-align-items: center;
-margin-top: 80px;
-column-gap: 30px;
-row-gap: 35px;
-margin-bottom: 15px;"> 
+<div class="parent"> 
 
     {% for cat in cats_data %}
-    <div class="animal"
-     style="
-    width: 200px;
-    height: 214px;
-    text-align: center;
-    border-radius: 10%;
-    box-shadow: 2px 5px 14px 3px beige; 
-    background-color: rgb(236, 218, 183);
-     "> 
+    <div class="animal"> 
     <p> name: {{cat["name"]}}</p>
     <p> age: {{cat["age"]}}</p>
     <p> breed: {{cat["breed"]}}</p>
     <p> vaccinated?: {{cat["vaccinated"]}}</p>
     <p> gender: {{cat["gender"]}} </p>
-    <a href="/shelter">
-        <button class="contact-owner button" style="
-        border: none;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: peru;
-        cursor: pointer;
-        text-decoration: none;
-        "> Adopt </button>
+    <a href="/shelter" class="button-link">
+        <button class="contact-owner button"> Adopt </button>
     </a>
-    <a href="{{ url_for('delete', name=cat['name']) }}">
-        <button class="delete button" name="{{cat["name"]}}" style="
-        border: none;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: peru;
-        cursor: pointer;
-        text-decoration: none; 
-        "> Adopted </button>
+    <a href="{{ url_for('delete', name=cat['name']) }}" class="button-link">
+        <button class="delete button" name="{{cat["name"]}}"> Adopted </button>
     </a>
 </div>
-     <div class="imge" style="
-     border-radius: 10%;
-     width: 200px;
-     height: 214px;">
-        <img src={{cat["image"]}} width="90%" height="100%" style="border-radius: inherit;">
+     <div class="imge">
+        <img src={{cat["image"]}}  class="animal-img">
      </div>
 
  
