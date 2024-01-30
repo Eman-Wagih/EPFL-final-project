@@ -33,7 +33,10 @@ body {
     font-weight:600;  
 };
 
-form .cat-search {
+form {
+    position: relative;
+}
+.cat-search {
     position: absolute;
     margin-top: 10px;
     left: 30%;
@@ -42,36 +45,58 @@ form .cat-search {
     height: 30px;
     border-radius: 20px;
     text-align: center;
+    border: 1px solid peru;
 }
-/* .parent { 
-    display: flex;
-    justify-content: space-evenly;
-} */
+.parent { 
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    margin-top: 80px;
+    column-gap: 30px;
+    row-gap: 35px;
+    margin-bottom: 15px;
+}
+
+.parent .animal {
+    width: 200px;
+    height: 214px;
+    text-align: center; 
+    border-radius: 10%;
+    box-shadow: 2px 5px 14px 3px beige; 
+    background-color: rgb(236, 218, 183);
+}
 
 .animal:hover {
     transform: scale(1.1);
 }
+
  .button {
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     background-color: peru;
-    cursor: pointer; 
+    cursor: pointer;
+    text-decoration: none;
 } 
 
 .button:hover {
     background-color: rgb(120, 71, 23);
     
-}; 
+}
 
-.contact {
-    position: absolute;
-    top: 50%;
-    left: 41%;
-    width: 286px;
-    height: 119px;
-    background-color: peru;
-    border: 1px solid brown;
-    text-align: center;
-    border-radius: 15px;
-};
+.button-link {
+    text-decoration: none;
+}
+
+.imge {
+    border-radius: 10%;
+     width: 200px;
+     height: 214px;
+}
+
+.animal-img {
+    width:90%;
+    height:100%; 
+    border-radius: inherit;
+}
