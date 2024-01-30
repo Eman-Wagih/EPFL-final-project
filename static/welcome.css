@@ -1,3 +1,7 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -23,7 +27,7 @@ body {
 }
 .nav-links a:hover{
     background-color: rgb(120, 71, 23);
-};
+}
 
 .us-name {
     display: flex;
@@ -32,7 +36,6 @@ body {
 }
 
 .display-user-name {
- font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  position: absolute;
  top: 30%;
  left: 50%;

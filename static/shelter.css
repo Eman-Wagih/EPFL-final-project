@@ -28,9 +28,27 @@ body {
 .nav-links a:hover{
     background-color: rgb(120, 71, 23);
     font-weight:600;  
-};
+}
 
 .Shelter-Contact {
     position: absolute;
-    left: 20%;
+    left: 42%;
+    text-align: center;
+    top: 35%;
+}
+
+.button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: peru;
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+.msg {
+    position: absolute;
+    left: 36%; 
+    top: 30%; 
+    text-align:center
 }
