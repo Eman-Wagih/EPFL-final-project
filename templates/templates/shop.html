@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/shop.css">
+    <title> shop</title>
+</head>
+<body>
+    
+ <div>
+        <nav class="nav-links"> 
+            <ul> 
+                <li> <a href="/cats" >adopt a cat</a> </li>
+                <li> <a href="/dogs" >adopt a dog</a> </li>
+                <li> <a href="/adoption"> put your pet up for adoption </a> </li>  
+                <li> <a href="/shop"> Shop </a></li>
+                <li> <a href="/log-out" class="log-out"> Log out</a></li>
+            </ul>
+           </nav>
+        <hr>
+    <div class="listproducts"> 
+        {% for product in product_data %}
+        <div class="item">
+        <p class="product-type"> {{product["Product type"]}}</p>
+        <p class="price"> {{product["price"]}} EGP </p>
+     <div class="imge">
+        <img src={{product["image"]}} class="product-img">
+     </div>
+     <button class="add-to-cart button"> order </button>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="buying">
+        <form>
+            <p> please enter your name </p>
+            <input type="text" class="client-name input-text" required>
+            <p> please enter your phone number </p>
+            <input type="number" class="client-phone input-text" required>
+            <p> please enter your email </p>
+            <input type="email" class="client-email input-text" required>
+            <p> add your address </p>
+            <input type="text" class="client-address input-text" required>
+            <p> add dilvery instructions </p>
+            <input type="text" class="input-text">
+            <br>
+            <br>
+            <input type="submit" class="order-now button" value="Order Now">
+        </form>
+    </div>
+    <p class="display-info"> </p>
+    <script src="static/shop.js"></script>
+</body>
+</html>
