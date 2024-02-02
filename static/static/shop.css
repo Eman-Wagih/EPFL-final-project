@@ -1,0 +1,124 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+
+.nav-links ul{
+    list-style-type: none;
+    /* background-color: peru; */
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 15;
+}
+.nav-links a{
+    color: rgb(120, 71, 23);
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    z-index: 15;
+    
+}
+.nav-links a:hover{
+    border-bottom: rgb(120, 71, 23);
+    font-weight:600;  
+}
+
+.log-out {
+    border: 1px solid rgb(120, 71, 23);
+    border-radius: 40%;
+    background-color: rgb(120, 71, 23);
+    color: white !important;
+}
+
+.listproducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    margin-top: 80px;
+    column-gap: 40px;
+    row-gap: 35px;
+    margin-bottom: 15px;
+}
+
+.item {
+    text-align: center;
+    line-height: 5px;
+    border-radius: 10%;
+    box-shadow: 1px -1px 4px -1px peru;
+    width: 200px;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.imge {
+    border-radius: 10%
+}
+
+.product-img {
+    width: 150px;
+    height:100px;
+    border-radius: inherit;
+}
+
+.button {
+    border: none;
+     margin: 10px;
+     padding: 10px;
+     border-radius: 10px;
+     background-color: peru;
+     cursor: pointer;
+     font-weight: 500;
+}
+
+.buying {
+    display: none;  
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 15px
+}
+
+.buying p {
+    font-weight: 700;
+}
+
+form input {
+  border: 1px solid peru;
+ 
+}
+
+.input-text {
+    width: 260px;
+    height: 25px;
+}
+
+.display-info {
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 30px;
+}
+
+.buying input {
+    border-radius: 15px;
+}
+
+
+
+

@@ -1,0 +1,130 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* background-color: wheat; */
+}
+
+.header {
+    background-image: url(images/cats/header.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 15;
+} 
+
+.over-lay {
+    width: 100%;
+    height: 500px;
+    background-color: peru;
+    opacity: 20%;
+    position: absolute;
+    z-index: 1;
+}
+
+.nav-links {
+    z-index: 15;
+} 
+.nav-links ul{
+    list-style-type: none;
+    /* background-color: peru; */
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 15;
+}
+.nav-links a{
+    color: rgb(120, 71, 23);
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    z-index: 15;
+    
+}
+.nav-links a:hover{
+    border-bottom: rgb(120, 71, 23);
+    font-weight:600;  
+}
+
+.log-out {
+    border: 1px solid rgb(120, 71, 23);
+    border-radius: 40%;
+    background-color: rgb(120, 71, 23);
+    color: white !important;
+}
+
+form {
+    position: relative;
+}
+.cat-search {
+    position: absolute;
+    margin-top: 10px;
+    left: 30%;
+    width: 350px;
+    border: none;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid peru;
+}
+.parent { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    margin-top: 80px;
+    column-gap: 40px;
+    row-gap: 35px;
+    margin-bottom: 15px;
+}
+
+.parent .animal {
+    text-align: center;
+    line-height: 5px;
+    border-radius: 10%;
+    box-shadow: 1px -1px 4px -1px peru;
+}
+
+.animal:hover {
+    transform: scale(1.1);
+}
+
+ .button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: peru;
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+.button:hover {
+    background-color: rgb(120, 71, 23);
+    
+}
+
+.button-link {
+    text-decoration: none;
+}
+
+.imge {
+    border-radius: 10%;
+     width: 200px;
+     height: 214px;
+}
+
+.animal-img {
+    border-radius: inherit;
+}

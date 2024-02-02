@@ -1,0 +1,95 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+ .over-lay {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: peru;
+    /* opacity: 20%; */
+    position: absolute;
+    z-index: 1;
+    background-image: url(images/bg/2599894676_04e45343c2_o.jpg);
+    filter: grayscale(30%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.entro {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: absolute;
+       margin: auto;
+       border-radius: 30px;
+       position: relative;
+       z-index: 15;
+       text-align: center;
+    
+}
+
+.bg-color {
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+    opacity: 50%;
+    border-radius: 13%;
+    position: relative;
+    top: 35px;
+    
+}
+
+.entro input {
+    border-radius: 10px;
+    border: 1px solid peru;
+    width: 250px;
+    height: 25px;
+    margin-bottom: 20px;
+
+}
+.button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: peru;
+    cursor: pointer;
+    font-weight: bold;
+    width: 250px;
+    height: 35px !important;
+    position: relative;
+    top: 10px;
+    left: 0%;
+    margin-bottom: 5px;
+}
+
+.formLogin {
+    position: absolute;
+    z-index: 15;
+    top: 25%;
+}
+
+.info {
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+    color: red;
+    z-index: 15;
+}
+
+.link a{
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    font-weight: 800;
+}
+
+
+
