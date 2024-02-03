@@ -1,56 +1,76 @@
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
-    background-color: wheat;
+    background-color: beige;
 }
+
 
 .nav-links ul{
     list-style-type: none;
-    background-color: peru;
+    /* background-color: peru; */
     padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+    z-index: 15;
 }
 .nav-links a{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
+    color: rgb(120, 71, 23);
     text-decoration: none;
-    padding: 15px;
+    padding: 10px;
+    margin-top: 10px;
     display: block;
     text-align: center;
+    z-index: 15;
+    
 }
 .nav-links a:hover{
-    background-color: rgb(120, 71, 23);
+    border-bottom: rgb(120, 71, 23);
     font-weight:600;  
 }
 
+.log-out {
+    border: 1px solid rgb(120, 71, 23);
+    border-radius: 40%;
+    background-color: rgb(120, 71, 23);
+    color: white !important;
+}
+
 .listproducts {
-    display: grid;
-    justify-content:center; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     grid-template-columns: auto auto auto auto;
-    gap: 15px; 
-    align-items:center;
-    margin-top: 60px
+    align-items: center;
+    margin-top: 80px;
+    column-gap: 40px;
+    row-gap: 35px;
+    margin-bottom: 15px;
 }
 
 .item {
-    width: 250px;
-    height: 350px;
-    text-align:center;border-radius: 10% ;
-    box-shadow: 2px 5px 14px 3px beige;
+    text-align: center;
+    line-height: 5px;
+    border-radius: 10%;
+    box-shadow: 1px -1px 4px -1px peru;
+    width: 200px;
+}
+
+.item:hover {
+    transform: scale(1.1);
 }
 
 .imge {
     border-radius: 10%
 }
 
-.animal-img {
+.product-img {
     width: 150px;
     height:100px;
     border-radius: inherit;
@@ -74,13 +94,25 @@ body {
     border-radius: 15px
 }
 
+.buying p {
+    font-weight: 700;
+}
+
 form input {
   border: 1px solid peru;
+ 
 }
+
+.input-text {
+    width: 260px;
+    height: 25px;
+}
+
 .display-info {
     margin: auto;
     text-align: center;
     padding-top: 10px;
+    line-height: 30px;
 }
 
 .buying input {

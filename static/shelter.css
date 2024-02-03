@@ -1,42 +1,62 @@
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: wheat;
+    background-color: beige;
 }
 
 .nav-links ul{
     list-style-type: none;
-    background-color: peru;
+    /* background-color: peru; */
     padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+    z-index: 15;
 }
 .nav-links a{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
+    color: rgb(120, 71, 23);
     text-decoration: none;
-    padding: 15px;
+    padding: 10px;
+    margin-top: 10px;
     display: block;
     text-align: center;
+    z-index: 15;
+    
 }
 .nav-links a:hover{
-    background-color: rgb(120, 71, 23);
+    border-bottom: rgb(120, 71, 23);
     font-weight:600;  
 }
 
-.Shelter-Contact {
-    position: absolute;
-    left: 42%;
-    text-align: center;
-    top: 35%;
+.log-out {
+    border: 1px solid rgb(120, 71, 23);
+    border-radius: 40%;
+    background-color: rgb(120, 71, 23);
+    color: white !important;
 }
 
+.Shelter-Contact {
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.Shelter-Contact p {
+    font-weight: 700;
+}
+
+.input {
+    width: 260px;
+    height: 25px;
+    border: 1px solid peru;
+    border-radius: 15px
+}
 .button {
     border: none;
     padding: 10px;
@@ -51,4 +71,7 @@ body {
     left: 36%; 
     top: 30%; 
     text-align:center
+}
+hr {
+    color: brown;
 }

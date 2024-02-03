@@ -6,14 +6,13 @@ const parentDiv = document.querySelector(".parent")
 catSearch.addEventListener("click", function () {
     catSearch.style.width = "40%";
     catSearch.style.transition = "1s"
-    catSearch.style.border = "1px solid black"
+    catSearch.style.border = "1px solid peru"
     parentDiv.style.filter = "blur(8px)"
 }); 
 
 // removing the events when the user clicks away
 parentDiv.addEventListener("click", function () {
     catSearch.style.width = "350px";
-    catSearch.style.border = "none";
     parentDiv.style.filter = "none"
 }); 
 

@@ -1,33 +1,70 @@
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: wheat;
 }
 
+.header {
+    background-image: url(images/dogs/header3.jpg);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 15;
+} 
+
+.over-lay {
+    width: 100%;
+    height: 500px;
+    background-color: peru;
+    opacity: 20%;
+    position: absolute;
+    z-index: 1;
+}
+
+.nav-links {
+    z-index: 15;
+} 
 .nav-links ul{
     list-style-type: none;
-    background-color: peru;
+    /* background-color: peru; */
     padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+    z-index: 15;
 }
 .nav-links a{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
+    color: rgb(120, 71, 23);
     text-decoration: none;
-    padding: 15px;
+    padding: 10px;
+    margin-top: 10px;
     display: block;
     text-align: center;
+    z-index: 15;
+    
 }
-.nav-links a:hover{
+.nav-links a:hover {
+    border-bottom: rgb(120, 71, 23);
+    font-weight:600;  
+}
+
+
+.log-out {
+    border: 1px solid rgb(120, 71, 23);
+    border-radius: 40%;
     background-color: rgb(120, 71, 23);
+    color: white !important;
+    
 }
+
 form {
     position: relative;
 }
@@ -44,23 +81,22 @@ form {
 }
 
 .parent { 
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     grid-template-columns: auto auto auto auto;
     align-items: center;
     margin-top: 80px;
-    column-gap: 30px;
+    column-gap: 40px;
     row-gap: 35px;
     margin-bottom: 15px;
 }
 
 .parent .animal {
-    width: 200px;
-    height: 214px;
-    text-align: center; 
+    text-align: center;
+    line-height: 5px;
     border-radius: 10%;
-    box-shadow: 2px 5px 14px 3px beige; 
-    background-color: rgb(236, 218, 183);
+    box-shadow: 1px -1px 4px -1px peru;
 }
 
 .animal:hover {
@@ -101,7 +137,5 @@ form {
 }
 
 .animal-img {
-    width:90%;
-    height:100%; 
     border-radius: inherit;
 }
