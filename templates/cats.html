@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="{{url_for('static', filename='cats.css')}}">
     <title>Adopt a cat</title>
 </head>
-<body  bgcolor="wheat">
-    
+<body>
+    <header class="header"> 
+       <div class="over-lay"></div>
+
     <nav class="nav-links"> 
         <ul> 
             <li> <a href="/cats" >Adopt a cat</a> </li>
@@ -18,20 +20,21 @@
             <li> <a href="/log-out" class="log-out"> Log out</a></li>
         </ul>
        </nav>
-
+    </header>
        <form action="/search" method="post" >
         <input type="search" placeholder="search cat by breed, gender, etc" name="cat" class="cat-search"> 
        </form>
 
-<div class="parent"> 
+<div class="parent" reversed> 
 
     {% for cat in cats_data %}
     <div class="animal"> 
-    <p> name: {{cat["name"]}}</p>
-    <p> age: {{cat["age"]}}</p>
-    <p> breed: {{cat["breed"]}}</p>
-    <p> vaccinated?: {{cat["vaccinated"]}}</p>
-    <p> gender: {{cat["gender"]}} </p>
+    <img src={{cat["image"]}}  class="animal-img" width="200px" height="214px">
+    <p> {{cat["name"]}}</p>
+    <p> {{cat["age"]}}</p>
+    <p> {{cat["breed"]}}</p>
+    <p> {{cat["vaccinated"]}}</p>
+    <p> {{cat["gender"]}} </p>
     <a href="/shelter" class="button-link">
         <button class="contact-owner button"> Adopt </button>
     </a>
@@ -39,9 +42,9 @@
         <button class="delete button" name="{{cat["name"]}}"> Adopted </button>
     </a>
 </div>
-     <div class="imge">
-        <img src={{cat["image"]}}  class="animal-img">
-     </div>
+     <!-- <div class="imge">
+        
+     </div> -->
 
  
     {% endfor %}

@@ -7,7 +7,8 @@
     <title> shop</title>
 </head>
 <body>
-    <div>
+    
+ <div>
         <nav class="nav-links"> 
             <ul> 
                 <li> <a href="/cats" >adopt a cat</a> </li>
@@ -17,14 +18,14 @@
                 <li> <a href="/log-out" class="log-out"> Log out</a></li>
             </ul>
            </nav>
-
+        <hr>
     <div class="listproducts"> 
         {% for product in product_data %}
         <div class="item">
         <p class="product-type"> {{product["Product type"]}}</p>
         <p class="price"> {{product["price"]}} EGP </p>
      <div class="imge">
-        <img src={{product["image"]}} class="animal-img">
+        <img src={{product["image"]}} class="product-img">
      </div>
      <button class="add-to-cart button"> order </button>
         </div>
@@ -33,15 +34,15 @@
     <div class="buying">
         <form>
             <p> please enter your name </p>
-            <input type="text" class="client-name" required>
+            <input type="text" class="client-name input-text" required>
             <p> please enter your phone number </p>
-            <input type="number" class="client-phone" required>
+            <input type="number" class="client-phone input-text" required>
             <p> please enter your email </p>
-            <input type="email" class="client-email" required>
+            <input type="email" class="client-email input-text" required>
             <p> add your address </p>
-            <input type="text" class="client-address" required>
+            <input type="text" class="client-address input-text" required>
             <p> add dilvery instructions </p>
-            <input type="text">
+            <input type="text" class="input-text">
             <br>
             <br>
             <input type="submit" class="order-now button" value="Order Now">
